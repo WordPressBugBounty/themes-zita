@@ -5,6 +5,11 @@
  * @param  
  * @return mixed|string
  */
+if ( ! function_exists( 'is_plugin_active' ) ){
+    require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    }
+$plugin_companion_file = 'zita-site-library/zita-site-library.php';
+// $plugin_companion_exists = file_exists(WP_PLUGIN_DIR . '/' . 'zita-site-library/zita-site-library.php');
 get_template_part( 'inc/themes-hooks');
 get_template_part('inc/class-zita-theme-options');
 get_template_part('inc/admin-function');
@@ -15,7 +20,9 @@ get_template_part('inc/blog-function');
 get_template_part('inc/blog-single-function');
 get_template_part('inc/default-string');
  //theme-option
-get_template_part('lib/theme-option/class-zita-admin-settings');
+// get_template_part('lib/theme-option/class-zita-admin-settings');
+//th option
+get_template_part( 'lib/th-option/th-option');
 
  //pagination
 get_template_part('inc/pagination/pagination');
@@ -45,3 +52,11 @@ get_template_part('inc/woocommerce/woocommerce-ajax');
 // Probutton
 /******************************/
 get_template_part('customizer/pro-button/class-customize');
+
+if (is_admin()) {
+	get_template_part( 'lib/notification/notify');
+}
+if ( is_customize_preview() && !is_plugin_active($plugin_companion_file) ) {
+    get_template_part('lib/notification/customizer-notification/thsm-custom-section');
+        
+}
