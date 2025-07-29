@@ -3,14 +3,14 @@ Contributors: ThemeHunk
 Tags: two-columns, right-sidebar, block-patterns, custom-menu, custom-background, editor-style, translation-ready, full-width-template, flexible-header, sticky-post, theme-options, one-column, e-commerce, blog, photography, threaded-comments, custom-colors
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 1.6.6
+Stable tag: 1.6.7
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
 Zita elementor theme is Easy to use, Fully Customizable, it has unique option which helps to create great website.
 
 == Description ==
-Zita is super fast and highly customizable Elementor theme. Suitable to creating any type of website such a shopping,  corporate, store, agency, blog, portfolio, restaurant, wedding, construction, hospital, school, interior, car workshop, life coach, wine shop, barber shop, furniture shop, yoga, resume, charity, digital marketing  etc. Zita include 8 unique header layout and 8 footer widget layout which make it extremely powerful. Zita works with any of your favourite page builder like Elementor, Visual Composer, Beaver Builder, SiteOrigin, Divi, Brizy etc. Some more amazing feature as Woocommerce ready, RTL Ready, Full Responsive, Edit settings in tablet & mobile, Top header, Bottom header, Top footer, Bottom Footer, Transparent Header. Looking for perfect base theme? Looking for perfect multipurpose theme? Look no further! just check Zita demos:https://wpzita.com/. Zita is built with best SEO practice and best friend of Woocommerce and Elementor.
+Zita is super fast and highly customizable Elementor theme. Suitable to creating any type of website such a shopping,  corporate, store, agency, blog, portfolio, restaurant, wedding, construction, hospital, school, interior, car workshop, life coach, wine shop, barber shop, furniture shop, yoga, resume, charity, digital marketing  etc. Zita include 8 unique header layout and 8 footer widget layout which make it extremely powerful. Zita works with any of your favourite page builder like Elementor, Visual Composer, Beaver Builder, SiteOrigin, Divi, Brizy etc. Some more amazing feature as Woocommerce ready, RTL Ready, Full Responsive, Edit settings in tablet & mobile, Top header, Bottom header, Top footer, Bottom Footer, Transparent Header. Looking for perfect base theme? Looking for perfect multipurpose theme? Look no further! just check Zita demos:https://zitademo.wpzita.com/popular-business/. Zita is built with best SEO practice and best friend of Woocommerce and Elementor.
 
 For more information about Zita please go to : https://wpzita.com
 
@@ -68,6 +68,10 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.6.7 =
+Update: Widget Footer display condition added.
+Update: WorkSans-Medium & Nunito-Medim font added.
 
 = 1.6.6 =
 Update: New cart plugin integrated.
@@ -309,7 +313,6 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.6.5 =
-Update: get_search_form() replaced custom form.
-Update: Theme Option chnaged.
-Update: Tested with WordPress 6.8.
+= 1.6.7 =
+Update: Widget Footer display condition added.
+Update: WorkSans-Medium & Nunito-Medim font added.
