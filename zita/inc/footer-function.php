@@ -10,6 +10,40 @@
 /**
  * Function to get above footer
  */
+function zita_full_footer_markup() {
+    // Get dynamic values directly
+ if ( is_single() || is_page() ){
+$zita_disable_above_footer_dyn  = get_post_meta( get_the_ID(), 'zita_disable_above_footer_dyn', true );
+$zita_disable_footer_widget_dyn = get_post_meta( get_the_ID(), 'zita_disable_footer_widget_dyn', true ); 
+$zita_disable_bottom_footer_dyn = get_post_meta( get_the_ID(), 'zita_disable_bottom_footer_dyn', true ); 
+}else{
+$zita_disable_above_footer_dyn  ='';
+$zita_disable_footer_widget_dyn ='';
+$zita_disable_bottom_footer_dyn ='';
+}
+
+    ?>
+     <footer id="zita-footer" class="zita-site-footer">
+      
+      <div class="footer-wrap widget-area">
+      <?php 
+        zita_footer_abv_post_meta($zita_disable_above_footer_dyn);
+        zita_footer_widget_post_meta($zita_disable_footer_widget_dyn);
+          zita_footer_bottom_post_meta($zita_disable_bottom_footer_dyn);
+      ?>
+      </div>
+      <?php if(get_theme_mod('zita_stick_footer_active')==true){ ?>
+    <div class="footer-sticky-icon">
+      <span class="footer-icon">
+      </span>
+    </div>
+    <?php } ?>
+    </footer>
+    <?php
+}
+
+// Hook the custom footer function into 'zita_footer'
+add_action('zita_footer', 'zita_full_footer_markup');
 if ( ! function_exists( 'zita_top_footer_markup' ) ){	
 function zita_top_footer_markup(){ ?>
 <?php 
@@ -180,6 +214,7 @@ $zita_bottom_footer_col3_set= get_theme_mod( 'zita_bottom_footer_col3_set','text
 		 	<div class="bottom-footer-bar <?php echo esc_attr($zita_bottom_footer_layout);?>">
 		       <div class="container">
 			      <div class="bottom-footer-container">
+              <?php zita_display_customizer_shortcut('zita-bottom-footer'); ?>
               <?php if($zita_bottom_footer_layout=='ft-btm-one'):?>  
                  <div class="bottom-footer-col1">
                   <?php zita_bottom_footer_conetnt_col1($zita_bottom_footer_col1_set); ?>
@@ -382,6 +417,7 @@ $any_footer_widget_active = is_active_sidebar('footer-1')
 		 	<div class="widget-footer-bar <?php echo esc_attr($zita_bottom_footer_widget_layout);?>">
 		       <div class="container">
 			      <div class="widget-footer-container">
+              <?php zita_display_customizer_shortcut('zita-widget-footer'); ?>
 			      	<?php if($zita_bottom_footer_widget_layout=='ft-wgt-one'):?>
 		             <div class="widget-footer-col1">
 		             	<?php if( is_active_sidebar('footer-1' ) ){

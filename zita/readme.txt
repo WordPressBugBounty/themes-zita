@@ -2,8 +2,8 @@
 Contributors: ThemeHunk
 Tags: two-columns, right-sidebar, block-patterns, custom-menu, custom-background, editor-style, translation-ready, full-width-template, flexible-header, sticky-post, theme-options, one-column, e-commerce, blog, photography, threaded-comments, custom-colors
 Requires at least: 5.0
-Tested up to: 6.8
-Stable tag: 1.6.7
+Tested up to: 6.9
+Stable tag: 1.7
 License: GPLv3 or later
 License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -68,6 +68,34 @@ Yes our theme supports builder
 Yes, this theme is tested with latest version of WordPress, you can use it for your site.
 
 == Changelog ==
+
+= 1.7 =
+* Update: Remove current-menu-item class from menu items with # links using add_filter('nav_menu_css_class', function ($classes, $item) {})
+
+= 1.6.11 =
+* Update: Zita-custom.js syntax error resolved.
+
+= 1.6.10 =
+* Update: is_shop exits condition added.
+
+= 1.6.9 =
+* Update: Theme updated.
+* Update: is_shop exits condition added.
+
+= 1.6.8 =
+* Update: Customizer Focus added.
+* Update: Header implementation through hooks using do_action( 'zita_header' );
+* Update: Footer implementation through hooks using do_action( 'zita_footer' );
+* Update: zita_header_body_classes added as new function to add class to the body tag.
+* Update: input hidden element removed and its working aded through using localize zita_ajaxurl.
+* Update:
+1. TH COMPARE INETEGRATED.
+2. Style Improved
+3. Tested with latest PHP 8.3 / 8.4.
+4. Tested with wordpress 6.8.
+5. No open code present (__load_text_domain error)
+6. TH Wishlist added in Option Panel.
+7. Hooks added at after & before of haeder and footer also class added in these tags.
 
 = 1.6.7 =
 Update: Widget Footer display condition added.
@@ -313,6 +341,5 @@ Initial release
 
 == Upgrade Notice ==
 
-= 1.6.7 =
-Update: Widget Footer display condition added.
-Update: WorkSans-Medium & Nunito-Medim font added.
+= 1.6.11 =
+* Update: Zita-custom.js syntax error resolved.
